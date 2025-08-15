@@ -4,9 +4,9 @@ import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden pt-20">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+    <section className="min-h-screen flex items-center justify-center bg-background relative overflow-hidden pt-20">
+      {/* Subtle background elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5"></div>
       <div className="absolute top-20 left-20 animate-float">
         <Sparkles className="text-accent w-8 h-8 opacity-20" />
       </div>
@@ -73,14 +73,14 @@ const Hero = () => {
             </div>
             
             {/* Floating UI Elements */}
-            <div className="absolute -top-6 -right-6 bg-gradient-card p-4 rounded-xl shadow-accent animate-glow">
+            <div className="absolute -top-6 -right-6 bg-card border border-border/50 p-4 rounded-xl shadow-card animate-glow">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-accent rounded-full animate-pulse"></div>
                 <span className="text-sm font-medium text-foreground">AI Analyzing...</span>
               </div>
             </div>
             
-            <div className="absolute -bottom-6 -left-6 bg-gradient-card p-4 rounded-xl shadow-card">
+            <div className="absolute -bottom-6 -left-6 bg-card border border-border/50 p-4 rounded-xl shadow-card">
               <div className="text-sm text-muted-foreground">Match Score</div>
               <div className="text-2xl font-bold text-accent">94%</div>
             </div>
