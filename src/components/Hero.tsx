@@ -4,9 +4,12 @@ import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-background relative overflow-hidden pt-20">
-      {/* Subtle background elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5"></div>
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-muted/20 to-accent/10 relative overflow-hidden pt-20">
+      {/* Dynamic background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
       <div className="absolute top-20 left-20 animate-float">
         <Sparkles className="text-accent w-8 h-8 opacity-20" />
       </div>
@@ -18,10 +21,19 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-6 py-12 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
-          <div className="animate-fade-in-up">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-6">
+          <div className="animate-fade-in-up text-center lg:text-left">
+            {/* Logo Integration */}
+            <div className="flex justify-center lg:justify-start mb-8">
+              <img 
+                src="/lovable-uploads/1b1ae5d8-f199-43f9-adf7-95fec85d25ed.png" 
+                alt="ResuVoo Logo" 
+                className="h-16 w-auto mb-4"
+              />
+            </div>
+            
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/30 text-accent text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2" />
               AI-Powered Career Success
             </div>
@@ -73,14 +85,14 @@ const Hero = () => {
             </div>
             
             {/* Floating UI Elements */}
-            <div className="absolute -top-6 -right-6 bg-card border border-border/50 p-4 rounded-xl shadow-card animate-glow">
+            <div className="absolute -top-6 -right-6 bg-gradient-to-br from-card to-accent/10 border border-accent/30 p-4 rounded-xl shadow-accent animate-glow">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-accent rounded-full animate-pulse"></div>
                 <span className="text-sm font-medium text-foreground">AI Analyzing...</span>
               </div>
             </div>
             
-            <div className="absolute -bottom-6 -left-6 bg-card border border-border/50 p-4 rounded-xl shadow-card">
+            <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-card to-primary/10 border border-primary/30 p-4 rounded-xl shadow-card">
               <div className="text-sm text-muted-foreground">Match Score</div>
               <div className="text-2xl font-bold text-accent">94%</div>
             </div>

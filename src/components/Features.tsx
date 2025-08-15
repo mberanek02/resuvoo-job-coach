@@ -41,7 +41,7 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-muted/30">
+    <section id="features" className="py-20 bg-gradient-to-br from-muted/30 via-background to-accent/5">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -57,7 +57,7 @@ const Features = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="group bg-card p-8 rounded-2xl shadow-card hover:shadow-accent transition-all duration-300 hover:scale-105 animate-fade-in-up border border-border/50"
+              className="group bg-gradient-to-br from-card to-muted/20 p-8 rounded-2xl shadow-card hover:shadow-accent transition-all duration-300 hover:scale-105 animate-fade-in-up border border-border/50 hover:border-accent/20"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 ${
